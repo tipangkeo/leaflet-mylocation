@@ -46,11 +46,13 @@ async function getMyLocation() {
 
   //   L.marker([latitude, longitude]).addTo(myMap);
   // set latitude dan longitude ke marker
-  // marker.setLatLng([latitude, longitude]);
-  marker.setLatLng([-2.27986037, 114.00733578]);
+  marker.setLatLng([latitude, longitude]);
+  // marker.setLatLng([-2.27986037, 114.00733578]);
 
   document.getElementById('latitude').textContent = 'Latitude:' + latitude;
   document.getElementById('longitude').textContent = 'Longitude: ' + longitude;
 }
 
 getMyLocation();
+
+setInterval(getMyLocation, 1000);
